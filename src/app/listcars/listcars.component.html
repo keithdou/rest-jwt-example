@@ -1,0 +1,21 @@
+<table>
+  <thead>
+      <th>Brand</th>
+      <th>Year</th>
+      <th>Color</th>
+      <th>Price</th>
+      <th>Sale Date</th>
+      <th>VIN</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let car of carList">
+    <td>{{ car.brand }}</td>
+    <td>{{ car.year }}</td>
+    <td>{{ car.color }}</td>
+    <td>{{ car.price }}</td>
+    <td>{{ car.saleDate }}</td>
+    <td>{{ car.vin }}</td>
+  </tr>
+  <tbody>
+</table>
+
