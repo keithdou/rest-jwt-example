@@ -28,11 +28,11 @@
         let password: string = 'secret';
         cloned = request.clone({
           headers: request.headers.set("Authorization",
-            "Basic " + btoa(username + ":" + password))}); console.log('111');
+            "Basic " + btoa(username + ":" + password))}); 
       } else if (idToken) {      
         cloned = request.clone({
           headers: request.headers.set("Authorization",
-            "Bearer " + idToken)});console.log('222');
+            "Bearer " + idToken)});
       } else {
         return next.handle(request);
       }
