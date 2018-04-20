@@ -31,6 +31,6 @@ export class AppComponent {
   }
 
   isLoggedIn() {
-     return this.carService.loggedIn;
+     return this.carService.isLoggedIn();
   }
 }

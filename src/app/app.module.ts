@@ -22,25 +22,25 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ListCarsComponent,
-    LoginComponent
+  AppComponent,
+  ListCarsComponent,
+  LoginComponent
   ],
   imports: [
-    HttpClientModule,
-    BrowserModule,
-    RouterModule.forRoot(
-	    appRoutes
-    )
+  HttpClientModule,
+  BrowserModule,
+  RouterModule.forRoot(
+   appRoutes
+   )
   ],
   providers: [ {
-                provide: HTTP_INTERCEPTORS,
-                useClass: AuthInterceptor,
-                multi: true
-               },
-               CarService,
-               CanActivateViaAuthGuard
-             ],
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  },
+  CarService,
+  CanActivateViaAuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

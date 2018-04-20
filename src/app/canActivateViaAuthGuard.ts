@@ -8,7 +8,7 @@ export class CanActivateViaAuthGuard implements CanActivate {
   constructor(public carService: CarService) {} 
 
   canActivate() {
-    console.log("canActivate:" + this.carService.loggedIn);
-    return this.carService.loggedIn;
+    console.log("canActivate:" + this.carService.isLoggedIn());
+    return this.carService.isLoggedIn();
   }
 }

@@ -13,8 +13,7 @@ export class CarService {
  
  private token : Token;
  private carList : Car[];
- public loggedIn = false;
- 
+  
  constructor(private _http: HttpClient) {
   }
  
@@ -24,8 +23,7 @@ export class CarService {
         .map(
           data => {
             console.log(data);
-            this.loggedIn = true;
-            this.token = data as Token;
+           this.token = data as Token;
             localStorage.setItem("auth_token",this.token.token);
             console.log("Stored token is " + localStorage.getItem("auth_token"));
             console.log("CarService.login complete");
@@ -41,5 +39,9 @@ export class CarService {
         console.log(this.carList);
         return this.carList;
       }); 
+  }
+
+  isLoggedIn() {
+    return (this.token != null);
   }
 }
